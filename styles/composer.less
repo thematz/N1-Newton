@@ -1,0 +1,202 @@
+.layout-mode-popout {
+    .sheet-toolbar {
+        border-bottom: none;
+    }
+}
+
+.composer-inner-wrap {
+
+    input, textarea {
+        color: @text-color-heading;
+    }
+
+    .composer-header {
+        .composer-subject {
+            input {
+                font-size: 26px;
+                font-weight: 600;
+            }
+
+            ::-webkit-input-placeholder {
+               color: #B9BEC2;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+
+        .collapsed-composer-participants {
+            border: none;
+            font-weight: 400;
+            color: @text-color-heading;
+            font-size: 15px;
+
+            &:before {
+                content: "To";
+                margin-right: 8px;
+                font-weight: 400;
+            }
+        }
+
+        .composer-participant-field {
+            // &:after {
+            //     display: none;
+            // }
+
+            .participant {
+                .participant-primary {
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+            }
+
+            .tokenizing-field-wrap {
+
+                .tokenizing-field-input {
+                    margin-left: 25px;
+                }
+
+                .token {
+                    background: @white;
+                    box-shadow: none;
+                    padding: 0;
+
+                    .action {
+                        display: none;
+                    }
+
+                    &.selected {
+                        background: #6FB0EF;
+                        color: #EAF3FD;
+                        border: none;
+                        padding: 0 5px;
+                    }
+                }
+            }
+
+            .composer-field-label, .tokenizing-field-label {
+                color: @text-color-heading;
+                font-weight: 500;
+            }
+
+            .button-dropdown {
+                .primary-item, .only-item {
+                    background: @white;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .composer-action-bar-wrap {
+        background: @white;
+        border: none;
+
+        .btn-toolbar:not(.btn-emphasis) {
+            .generic-toolbar-btn;
+            margin: 0 5px;
+
+            img.content-mask {
+                line-height: 1;
+                position: relative;
+                left: -5px;
+                top: 3px;
+            }
+
+            &.btn-trash {
+                left: 0;
+            }
+        }
+
+        .btn-send {
+            .btn-green-outline;
+            padding: 9px 18px !important;
+            height: auto;
+            line-height: 1;
+
+            &:before {
+                display: none;
+            }
+
+            img {
+                display: none;
+            }
+
+            .text {
+                margin: 0;
+            }
+
+            .primary-item {
+                background: transparent;
+                color: @green;
+                padding: 0;
+                height: auto;
+                line-height: 1;
+                border: none;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            .secondary-picker {
+                display: none !important;
+            }
+
+            &:hover {
+                .primary-item {
+                    color: @white;
+                }
+            }
+        }
+
+        .composer-action-bar-content {
+            background: @white;
+            max-width: 100%;
+
+            .action-bar-animation-wrap {
+                .composer-action-bar-plugins {
+                    margin-left: 5px;
+
+                    .btn-toolbar {
+                        width: auto;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.composer-full-window {
+    background: @white;
+
+    .composer-inner-wrap {
+        .composer-action-bar-wrap {
+            border: none;
+        }
+    }
+
+    .composer-participant-field {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+body.platform-win32 {
+    .composer-full-window {
+        .btn-send {
+            box-shadow: none;
+        }
+
+        .composer-action-bar-content {
+            > button {
+                img.content-mask {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}

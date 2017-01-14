@@ -1,0 +1,13 @@
+{
+    "name": "N1-Newton",
+    "title": "Newton",
+    "displayName": "Newton",
+    "theme": "ui",
+    "version": "0.1.0",
+    "description": "The Newton N1 Client Theme",
+    "license": "MIT",
+    "engines": {
+        "nylas": "*"
+    },
+    "private": true
+}

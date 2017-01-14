@@ -1,0 +1,108 @@
+div[name="Center"] {
+    z-index: 3 !important;
+}
+
+.column-RootSidebar {
+    position: absolute !important;
+    width: 250px;
+    border: none;
+    box-shadow: none;
+    transition: 0.1s transform ease;
+    transform: translateX(-100%);
+    z-index: 1;
+
+    &:before {
+        content: '';
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        top: 5px;
+        left: 100%;
+        z-index: 100;
+        background: url('images/application-frame/windows-menu-icon@2x.png') center no-repeat;
+        background-size: 20px;
+        opacity: 0.5;
+    }
+
+    .flexbox-handle-right {
+        display: none;
+    }
+
+    .account-sidebar {
+        .z-depth-2;
+        padding-top: 40px;
+        background: @sidebar;
+
+        .account-sidebar-sections {
+
+        }
+
+        .account-switcher {
+            img {
+                filter: invert();
+            }
+        }
+    }
+
+    &:hover {
+        .z-depth-2;
+        transform: translateX(0);
+        z-index: 100;
+
+        &:before {
+            left: 0;
+            filter: invert();
+        }
+    }
+}
+
+.nylas-outline-view {
+    .heading {
+        color: @darken-light;
+    }
+
+    .item {
+        color: @darken-light;
+
+        .icon {
+            img {
+                background-color: @darken-light;
+            }
+        }
+
+        .name {
+            color: inherit;
+        }
+
+        .item-count-box {
+            color: @darken-light;
+            box-shadow: 0 0.5px 0 @darken-light, 0 -0.5px 0 @darken-light, 0.5px 0 0 @darken-light, -0.5px 0 0 @darken-light;
+
+            &.alt-count {
+                position: relative;
+                top: 1px;
+                border-radius: 2px;
+            }
+        }
+
+        &.selected {
+            background: transparent;
+        }
+    }
+
+    &:hover {
+        .heading {
+            .collapse-button, .add-item-button {
+                img {
+                    filter: invert();
+                }
+            }
+        }
+    }
+
+    .disclosure-triangle {
+        div {
+            border-left: 7px solid @darken-light;;
+        }
+    }
+}

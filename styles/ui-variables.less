@@ -1,0 +1,101 @@
+// Change these variables to modify your theme!
+
+// Newton variables
+
+// Colors
+@light: #F1F2F3;
+@green: #59AC6B;
+@blue: #71B4F9;
+@sidebar: #333436;
+@darken-light: darken(@light, 20%);
+
+// Width
+@global-max-width: 1080px;
+@global-width: 85%;
+//=============================== Components ===========================//
+
+//== Toolbar
+@toolbar-background-color: @white;
+@toolbar-border-color: rgba(0, 0, 0, 0.15);
+
+//== Account Sidebar
+@panel-background-color:         @gray-lighter;
+@source-list-bg:                 @panel-background-color;
+@source-list-active-bg:          @panel-background-color;
+@source-list-active-color:       @component-active-color;
+
+//== Thread List (e.g, `.list-group-item`, `.list-item`)
+@list-bg:                  @white;
+@list-color:               #5c5c5c;
+@list-border:              #F1F1F1;
+@list-hover-bg:            #F9F9F9;
+@list-focused-color:       @list-bg;
+@list-focused-bg:          @component-active-color;
+@list-focused-border:      @list-focused-bg;
+@list-selected-color:      @white;
+@list-selected-bg:         #419BF9;
+@list-selected-border:     #EBECED;
+
+//== Notifications
+@background-color-info: @blue-light;
+@background-color-success: #009ec4;
+@background-color-warning: #ff4800;
+@background-color-error: #f15f4b;
+@background-color-pending: #b4babd;
+
+//== Menus
+@menu-item-color-hover: fade(@blue-light, 10%);
+@menu-item-color-selected: @blue-light;
+@menu-text-color-selected: @text-color-inverse;
+
+//== Sizes
+@input-font-size: 14px;
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 2px;
+
+
+//=============================== Colors ===============================//
+
+@accent-primary:      @blue;
+@accent-primary-dark: @blue-dark;
+
+@background-primary:     @light;
+@background-off-primary: #fdfdfd;
+@background-secondary:   #f6f6f6;
+@background-tertiary:    #6d7987;
+
+@color-info:    @blue-dark;
+@color-success: @green;
+@color-warning: #f0ad4e;
+@color-error:   #d9534f;
+@color-danger:  #d9534f;
+
+@component-active-color:        @accent-primary-dark;
+@component-active-bg:           @background-primary;
+
+@background-gradient: linear-gradient(to top, rgba(241,241,241,0.75) 0%,
+rgba(253,253,253,0.75) 100%);
+
+@border-color-primary: darken(@background-primary, 10%);
+@border-color-secondary: darken(@background-primary, 15%);
+@border-color-tertiary: darken(@background-primary, 20%);
+@border-color-divider: #EBECED;
+
+// Checkmark
+@border-checkmark: #B8BCC0;
+@border-checkmark-hover: #778088;
+
+//============================= Typography =============================//
+
+// ----- Colors -----
+@text-color:         @black;
+@text-color-inverse: @white;
+
+@text-color-heading: #3B3F42;
+
+@text-color-link:        @blue;
+@text-color-link-hover:  @blue-dark;
+@text-color-link-active: @blue-dark;

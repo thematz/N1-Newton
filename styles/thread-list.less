@@ -1,0 +1,242 @@
+.column-ThreadList {
+    min-width: 760px !important;
+    max-width: @global-max-width;
+    width: @global-width;
+    margin: 0 auto;
+}
+
+@custom-list-item-height: 50px;
+
+.list-container {
+    div.list-rows {
+        margin-top: 20px;
+        padding: 0 0px;
+        max-width: @global-max-width;
+
+        @message-border: 1px solid @border-color-divider;
+        > div {
+            height: @custom-list-item-height !important;
+            position: relative !important;
+            margin-bottom: -36px;
+            border-left: @message-border;
+            border-right: @message-border;
+
+            &:first-child {
+                box-shadow: 0 -1px 0 0 @border-color-divider;
+            }
+
+            &:last-child {
+                box-shadow: 0 1px 0 0 @border-color-divider;
+
+                .list-item {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.draft-list,
+.thread-list {
+    .unread:not(.focused):not(.selected) {
+        background: @list-bg;
+
+        &:hover {
+            background: @list-hover-bg;
+        }
+    }
+
+    .list-item {
+        height: @custom-list-item-height !important;
+        line-height: @custom-list-item-height !important;
+        border-bottom: 1px solid @list-border;
+        background: @list-bg;
+        color: @list-color;
+
+        .thread-icon-star-on-hover {
+            background-image: url(../static/images/thread-list/icon-star-hover-@2x.png);
+            background-size: 16px;
+        }
+
+        .list-column-HoverActions {
+            .inner {
+                .thread-injected-quick-actions {
+                    background: @list-hover-bg;
+                    padding-left: 15px;
+                }
+
+                .action {
+                    width: 40px;
+                    height: 40px;
+                    box-shadow: none;
+                    background-size: 22px !important;
+                    opacity: 0.2;
+                    margin: 5px 0 !important;
+                    zoom: 1;
+                    transition: none;
+
+                    &.action-snooze {
+                        background: url(../static/images/thread-list-quick-actions/ic-quickaction-snooze@2x.png) center no-repeat;
+                    }
+
+                    &.action-trash {
+                        background: url(../static/images/thread-list-quick-actions/ic-quick-button-trash@2x.png) center no-repeat;
+                    }
+
+                    &:hover {
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background: @list-hover-bg;
+
+            .list-column-HoverActions {
+                .inner {
+                    background-image: none;
+
+                    .thread-injected-quick-actions {
+                        background: @list-hover-bg;
+                        margin-right: -8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.list-tabular {
+    .list-tabular-item {
+        .list-column-Check {
+            .checkmark {
+                top: 5px;
+
+                .inner {
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid @border-checkmark;
+                    opacity: 0;
+                    position: relative;
+                    border-radius: 50%;
+                    background: @list-hover-bg;
+
+                    &:before, &:after {
+                        content: '';
+                        background: @border-checkmark;
+                        position: absolute;
+                        transform: rotate(45deg);
+                    }
+
+                    &:before {
+                        width: 4px;
+                        height: 1px;
+                        top: 9px;
+                        left: 4px;
+                    }
+
+                    &:after {
+                        width: 1px;
+                        height: 7px;
+                        top: 5px;
+                        left: 9px;
+                    }
+
+                    &:hover {
+                        border-color: @border-checkmark-hover;
+
+                        &:before, &:after {
+                            background: @border-checkmark-hover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .list-column-★ {
+            order: 500;
+        }
+
+        .list-column-Participants {
+            margin-left: 7px;
+        }
+
+        &.keyboard-cursor {
+            border-left-color: transparent;
+        }
+
+        &.unread {
+            .list-column-Check {
+                .checkmark {
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 14px;
+                        left: 14px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: @blue;
+                        box-shadow: inset 0 0 0 1px transparent;
+                    }
+
+                }
+            }
+        }
+
+        &:hover {
+            .list-column-Check {
+                .checkmark {
+                    &:before {
+                        opacity: 0;
+                    }
+
+                    .inner {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &.selected {
+            background: @list-selected-bg;
+
+            .list-column-Check {
+                .checkmark {
+                    &:before {
+                        opacity: 0;
+                    }
+
+                    .inner {
+                        opacity: 1;
+                        background: @white;
+                        border-color: @list-selected-bg;
+
+                        &:before, &:after {
+                            background: @list-selected-bg;
+                        }
+                    }
+                }
+            }
+
+            .list-column-HoverActions {
+                display: none;
+            }
+        }
+    }
+}
+
+.draft-list {
+    width: @global-width;
+    max-width: @global-max-width;
+    margin: 0 auto;
+}
+
+// Windows
+body.platform-win32 {
+    .toolbar-ThreadList {
+        margin: 0 auto;
+        padding: 0 3px;
+    }
+}

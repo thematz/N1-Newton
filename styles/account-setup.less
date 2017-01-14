@@ -1,0 +1,43 @@
+body.platform-win32, body.platform-darwin {
+    &.window-type-onboarding, &.window-type-emptyWindow {
+        .page {
+            background: @white;
+        }
+
+        .account-choose {
+            .provider-list {
+                .provider {
+                    &:hover {
+                        background: @list-hover-bg;
+                    }
+
+                    .provider-name {
+                        font-weight: 400;
+                        color: @text-color-heading;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        .account-setup {
+            input {
+                box-shadow: 0 0 0 1px @border-color-primary;
+                border-radius: 1px;
+                border: none;
+            }
+
+            .btn {
+                border-radius: 20px;
+                box-shadow: 0 0 0 1px @border-color-primary;
+
+                &.btn-add-account {
+                    .btn-green-outline;
+                    width: auto;
+                    border: none !important;
+                    box-shadow: 0 0 0 1px @green;
+                }
+            }
+        }
+    }
+}
