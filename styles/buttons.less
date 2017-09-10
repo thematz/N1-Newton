@@ -19,19 +19,15 @@
     padding: 0;
     box-shadow: 0 0 0 1px @border-color-primary;
     border-radius: 50%;
+    transition: 0.3s box-shadow ease;
 
     img.content-mask {
-        transition: 0.3s box-shadow ease;
         vertical-align: sub;
-        opacity: 0.3;
+        opacity: 0.8;
     }
 
     &:hover {
         background: @white;
         box-shadow: 0 0 0 1px @border-color-secondary;
-
-        img.content-mask {
-            opacity: 0.5;
-        }
     }
 }
