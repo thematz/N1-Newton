@@ -40,10 +40,6 @@
         }
 
         .composer-participant-field {
-            // &:after {
-            //     display: none;
-            // }
-
             .participant {
                 .participant-primary {
                     font-weight: 400;
@@ -100,8 +96,24 @@
             img.content-mask {
                 line-height: 1;
                 position: relative;
-                left: -5px;
                 top: 3px;
+                left: -5px;
+            }
+
+            &.btn-attach, &.btn-trash {
+                padding: 0 !important;
+                margin: 0 3px;
+                box-shadow: 0 0 0 1px @border-color-primary !important;
+                
+                img.content-mask {
+                    top: 0;
+                    left: 0;
+                    opacity: 0.8 !important;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 0 1px @border-color-secondary !important;
+                }
             }
 
             &.btn-trash {
@@ -114,6 +126,7 @@
             padding: 9px 18px !important;
             height: auto;
             line-height: 1;
+            box-shadow: none;
 
             &:before {
                 display: none;
@@ -158,6 +171,7 @@
             .action-bar-animation-wrap {
                 .composer-action-bar-plugins {
                     margin-left: 5px;
+                    line-height: 1;
 
                     .btn-toolbar {
                         width: auto;
@@ -186,6 +200,19 @@
 }
 
 body.platform-win32 {
+    .button-dropdown {
+        .primary-item {
+            border-radius: 2px 0 0 2px;
+            box-shadow: 0 0 0 1px @border-color-primary;
+            left: 0;
+        }
+
+        .secondary-picker, .secondary-items {
+            border-radius: 0 2px 2px 0;
+            box-shadow: 0 0 0 1px @border-color-primary;
+        }
+    }
+
     .composer-full-window {
         .btn-send {
             box-shadow: none;
