@@ -8,6 +8,7 @@
 @blue: #71B4F9;
 @sidebar: #333436;
 @darken-light: darken(@light, 20%);
+@dark-50: rgba(0,0,0,.5);
 
 // Width
 @global-max-width: 1080px;
@@ -18,6 +19,8 @@
 @toolbar-background-color: @white;
 @toolbar-border-color: rgba(0, 0, 0, 0.15);
 
+@custom-sheet-toolbar-height: 49px;
+
 //== Account Sidebar
 @panel-background-color:         @gray-lighter;
 @source-list-bg:                 @panel-background-color;
@@ -26,7 +29,7 @@
 
 //== Thread List (e.g, `.list-group-item`, `.list-item`)
 @list-bg:                  @white;
-@list-color:               #5c5c5c;
+@list-color:               #3c3c3c;
 @list-border:              #F1F1F1;
 @list-hover-bg:            #F9F9F9;
 @list-focused-color:       @list-bg;
@@ -56,6 +59,8 @@
 @component-line-height: 25px;
 @component-border-radius: 2px;
 
+//== Scrollbar
+@scrollbar-handle: @dark-50;
 
 //=============================== Colors ===============================//
 
@@ -80,7 +85,7 @@
 rgba(253,253,253,0.75) 100%);
 
 @border-color-primary: darken(@background-primary, 10%);
-@border-color-secondary: darken(@background-primary, 15%);
+@border-color-secondary: darken(@background-primary, 30%);
 @border-color-tertiary: darken(@background-primary, 20%);
 @border-color-divider: #EBECED;
 
